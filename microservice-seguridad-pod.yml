@@ -11,3 +11,6 @@ spec:
       image: spblue/serviciosapiseguridad:latest
       ports:
         - containerPort: 80
+      env:
+       - name: ConnectionStrings__ConexionDB
+         value: Server=mssql-service;Database=Seguridad;User=sa;Password:$cspilapa2025

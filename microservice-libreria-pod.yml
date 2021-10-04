@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-    name: microservice-librerira-pod
+    name: microservice-libreria-pod
     labels:
         app: microservice-libreria
         type: microservice
@@ -11,3 +11,6 @@ spec:
       image: spblue/serviciosapilibreria:latest
       ports:
         - containerPort: 80
+      env:
+       - name: MongoDb__ConnectionString
+         value: mongodb://cspilapa:$cspilapa2025@mongo-service:27017
